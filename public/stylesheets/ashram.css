@@ -1,0 +1,49 @@
+.header .logo {
+    height: 40px;
+    width: 85px !important;
+}
+
+.ui.inverted.menu {
+  background-color: #ff8900;
+  border: 0px !important;
+  border-radius: 0px !important;
+}
+
+.hero-image {
+  background-image: url('/images/ashram/ashram_winter.jpg');
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.header-title h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.header-title {
+  background-color: #1b1c1dc4;
+  padding: 10px 50px;
+  color: white;
+}
+
+.hero-text {
+  color: white;
+  width: 1097px;
+}
+
+.text-description {
+  line-height: 1.5;
+  font-size: 17px;
+  text-align: center;
+  color: #1b1c1d;
+}
+
+/* overriding semantic */
+h3, h4 {
+  font-weight: normal !important;
+}

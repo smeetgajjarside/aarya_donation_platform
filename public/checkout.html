@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@stripe">
+  <meta name="twitter:title" content="IAHV Canada">
+  <meta name="twitter:description" content="IAHV Canada.">
+  <title>IAHV Canada | Donate</title>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@ungap/url-search-params@0.2.2/min.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/store.css">
+
+
+  <link rel="icon" type="image/png" href="/images/logo.png">
+
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdUYHEkAAAAAEQA412KsgoNtjJhLiYCjFZiNaSG"></script>
+
+
+</head>
+
+<body>
+  <main id="main" style="width: 100%;">
+    <div class="ui inverted menu">
+      <div class="ui container">
+        <a href="https:iahv.ca" class="header item">
+          <img class="logo" src="/images/logo.png" alt="IAHV Canada">
+        </a>
+        <span href="https://www.iahv.ca/" class="item" style="color:#f8fbfd;">
+          Donate to IAHV Canada
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+    <div class="form-group">
+      <div id="checkout">
+        <div class="success-message" id="success-message">
+          Thank you, Your donation was processed succesfully.
+          <br />
+          Please check your email address for confirmation.
+          <br /><br />
+          <hr />
+          <br />
+          <a href="https://iahv.ca">Go back to the IAHV Canada website.</a>
+        </div>
+        <form id="payment-form" method="POST" >
+          <input type="hidden" id="site_type" name="site_type" value="iahv" />
+          <input type="hidden" id="payment_type" name="payment_type" value="donation" />
+          <section id="check_box_group" style=" margin-bottom: 20px;">
+          </section>
+          <section>
+            <h2 style="font-family: sans-serif;"> Amount to donate</h2>
+            <div class="ui right labeled input">
+              <label for="amount" name="amount" class="ui label">$</label>
+              <input type="number" placeholder="Amount" id="amount" min="20" required disabled>
+              <div class="ui basic label">CAD</div>
+            </div>
+            <br />
+            <div class="ui form" id="cause_form">
+              <div class="grouped fields">
+                <label for="cause" style="font-family: sans-serif;font-size: 16px;
+                font-weight: normal;">Select your cause</label>
+                <div class="radio-group" style="margin-left: 40px;">
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="cause" value="general" checked="" tabindex="0" class="hidden">
+                      <label>IAHV Canada - General</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="cause" value="sky_resilience" tabindex="0" class="hidden">
+                      <label>Sky Resilience</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="cause" value="project_welcome_home" tabindex="0" class="hidden">
+                      <label>Project Welcome Home Troops</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="cause" value="sky_campus" tabindex="0" class="hidden">
+                      <label>SKY Campus Happiness</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="cause" value="sky_schools" tabindex="0" class="hidden">
+                      <label>SKY Schools</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="cause" value="prison_smart" tabindex="0" class="hidden">
+                      <label>Prison SMART</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <br />
+          <section>
+            <h2 style="font-family: sans-serif;"> Your information </h2>
+            <fieldset class="with-state">
+              <label>
+                <span>Name</span>
+                <input id="name" name="name" class="field" placeholder="Jenny Rosen" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input id="email" name="email" type="email" class="field" placeholder="jenny@example.com" required>
+              </label>
+              <label>
+                <span>Phone Number</span>
+                <input type="tel" id="phone" name="phoneNumber" placeholder="" required>
+              </label>
+            </fieldset>
+          </section>
+
+          <section>
+            <h2> Tax recipient information </h2>
+            <fieldset class="with-state">
+              <label>
+                <span>Street</span>
+                <input id="loc_street" name="locStreet" class="field" placeholder="140 Yonge St Suite 200" required>
+              </label>
+              <label>
+                <span>City</span>
+                <input id="loc_city" name="locCity" class="field" placeholder="Toronto" required>
+              </label>
+              <label>
+                <span>Province</span>
+                <input id="loc_province" name="locProvince" class="field" placeholder="Ontario" required>
+              </label>
+              <label>
+                <span>Postal Code</span>
+                <input id="loc_postalcode" name="locPostalCode" class="field" placeholder="M5C 1X6" required>
+              </label>
+            </fieldset>
+          </section>
+          <!-- <section>
+            <h2> Optional information (can enter company name here)</h2>
+            <fieldset class="with-state">
+              <label>
+                <span>Comment</span>
+                <input id="comment" name="comment" class="field" placeholder="Name of Company" required>
+              </label>
+            </fieldset>
+          </section>
+          <section> -->
+            <h2 style="font-family: sans-serif;">Payment Information</h2>
+
+            <label id="amount_label">
+              <span>Amount: $ 0
+              </span>
+            </label>
+            <br>
+
+            <nav id="payment-methods">
+              <ul>
+                <li>
+                  <input type="radio" name="payment" id="payment-card" value="card" checked>
+                  <label for="payment-card">Card</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-ach_credit_transfer" value="ach_credit_transfer"
+                    checked>
+                  <label for="payment-ach_credit_transfer">Bank Transfer</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-alipay" value="alipay">
+                  <label for="payment-alipay">Alipay</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-bancontact" value="bancontact">
+                  <label for="payment-bancontact">Bancontact</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-eps" value="eps">
+                  <label for="payment-eps">EPS</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-ideal" value="ideal">
+                  <label for="payment-ideal">iDEAL</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-giropay" value="giropay">
+                  <label for="payment-giropay">Giropay</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-multibanco" value="multibanco">
+                  <label for="payment-multibanco">Multibanco</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-sepa_debit" value="sepa_debit">
+                  <label for="payment-sepa_debit">SEPA Direct Debit</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-sofort" value="sofort">
+                  <label for="payment-sofort">SOFORT</label>
+                </li>
+                <li>
+                  <input type="radio" name="payment" id="payment-wechat" value="wechat">
+                  <label for="payment-wechat">WeChat Pay</label>
+                </li>
+              </ul>
+            </nav>
+            <div class="payment-info card visible">
+              <fieldset>
+                <label>
+                  <span>Card</span>
+                  <div id="card-element" class="field"></div>
+                </label>
+              </fieldset>
+            </div>
+            <div class="payment-info sepa_debit">
+              <fieldset>
+                <label>
+                  <span>IBAN</span>
+                  <div id="iban-element" class="field"></div>
+                </label>
+              </fieldset>
+              <p class="notice">By providing your IBAN and confirming this payment, you’re authorizing Payments Demo and
+                Stripe, our payment
+                provider, to send instructions to your bank to debit your account. You’re entitled to a refund under the
+                terms
+                and conditions of your agreement with your bank.</p>
+            </div>
+            <div class="payment-info ideal">
+              <fieldset>
+                <label>
+                  <span>iDEAL Bank</span>
+                  <div id="ideal-bank-element" class="field"></div>
+                </label>
+              </fieldset>
+            </div>
+            <div class="payment-info redirect">
+              <p class="notice">You’ll be redirected to the banking site to complete your payment.</p>
+            </div>
+            <div class="payment-info receiver">
+              <p class="notice">Payment information will be provided after you place the order.</p>
+            </div>
+            <div class="payment-info wechat">
+              <div id="wechat-qrcode"></div>
+              <p class="notice">Click the button below to generate a QR code for WeChat.</p>
+            </div>
+          </section>
+
+          <section class="terms-and-conditions" >
+            <div class="ui checkbox">
+              <input type="checkbox" name="example" required>
+              <label>I agree to the <a href="/termsofuse?site=iahv" target="_blank">Terms of Use</a> policy and <a href="/refund" target="_blank">Refund</a> policy.</label>
+            </div>
+          </section>
+
+          <br/>
+
+          <button class="payment-button" type="submit">Pay</button>
+        </form>
+        <div id="card-errors" class="element-errors"></div>
+        <div id="iban-errors" class="element-errors"></div>
+      </div>
+    </div>
+
+
+
+    <div id="confirmation">
+      <div class="status processing">
+        <h1>Completing your order…</h1>
+        <p>We’re just waiting for the confirmation from your bank… This might take a moment but feel free to close this
+          page.</p>
+        <p>We’ll send your receipt via email shortly.</p>
+      </div>
+      <div class="status success">
+        <h1>Thanks for your order!</h1>
+        <p>Woot! You successfully made a payment with Stripe.</p>
+        <p class="note">We just sent your receipt to your email address, and your items will be on their way shortly.
+        </p>
+      </div>
+      <div class="status receiver">
+        <h1>Thanks! One last step!</h1>
+        <p>Please make a payment using the details below to complete your order.</p>
+        <div class="info"></div>
+      </div>
+      <div class="status error">
+        <h1>Oops, payment failed.</h1>
+        <p>It looks like your order could not be paid at this time. Please try again or select a different payment
+          option.</p>
+        <p class="error-message"></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Stripe.js v3 for Elements -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- Library to render QR codes -->
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"
+    integrity="sha384-3zSEDfvllQohrq0PHL1fOXJuC/jSOO34H46t6UQfobFOmxE5BpjjaIJY5F2/bMnU"
+    crossorigin="anonymous"></script>
+  <!-- Library for generating fake user information -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha384-PlFzuf6GOlJNxLuosezJ/jwndIVZ2hWI/AmvYQtBzstOdLtcUe6DPSI4LsqwiN1y"
+    crossorigin="anonymous"></script>
+  <!-- App -->
+  <script src="/javascripts/store.js"></script>
+  <script src="/javascripts/payments.js"></script>
+
+  <script type="text/javascript">
+
+    $('.ui.radio.checkbox').checkbox();
+
+    window.addEventListener('load', (event) => {
+
+      const url = new URL(window.location.href);
+      const $amount = $("#amount");
+      $amount.val(url.searchParams.get("amount"));
+
+      const causeSelected = url.searchParams.get("cause");
+
+      if (causeSelected != null){
+        //currently checked one
+
+        const checkedCauseObj = $("#cause_form input[type='radio']:checked");
+
+        if (checkedCauseObj != null){
+          checkedCauseObj.prop("checked", false);
+        }
+
+        const toCheckCauseObj = $("input[type='radio'][value='" + causeSelected + "']");;
+
+        if (toCheckCauseObj != null){
+          toCheckCauseObj.prop("checked", true);
+        }
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

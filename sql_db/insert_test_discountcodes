@@ -1,0 +1,34 @@
+-- insert into discount_codes(discount_code_id, amount)
+-- VALUES
+-- ('GXIYF150WT_2', 50),
+-- ('GXIYF50WT_3', 50),
+-- ('GXIYF50WT_4', 50),
+-- ('GXIYF50WT_5', 50);
+
+-- insert into discount_codes(discount_code_id, amount)
+-- VALUES
+-- ('GXIYF100WT_2', 100),
+-- ('GXIYF100WT_3', 100),
+-- ('GXIYF100WT_4', 100),
+-- ('GXIYF100WT_5', 100);
+
+-- insert into discount_codes(discount_code_id, amount)
+-- VALUES
+-- ('GXIYF1200WT_2', 200),
+-- ('GXIYF200WT_3', 200),
+-- ('GXIYF200WT_4', 200),
+-- ('GXIYF200WT_5', 200);
+
+-- insert into discount_codes(discount_code_id, amount)
+-- VALUES
+-- ('GXIYF1500WT_2', 500),
+-- ('GXIYF500WT_3', 500),
+-- ('GXIYF500WT_4', 500),
+-- ('GXIYF500WT_5', 500);
+
+-- insert into discount_codes(discount_code_id, amount)
+-- VALUES
+-- ('GXIYF1000WT_2', 1000),
+-- ('GXIYF1000WT_3', 1000),
+-- ('GXIYF1000WT_4', 1000),
+-- ('GXIYF1000WT_5', 1000);

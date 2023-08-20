@@ -1,0 +1,10 @@
+{"message":"Failed to notify = Smeet Gajjar Test, email = smeetgajjarwork@gmail.com, paymentID = pi_3Jv8rXLNjSaTJ8R61y5VghdN","level":"error","service":"credit-gifting-service"}
+{"message":"Failed to notify = Smeet Gajjar Test, email = smeetgajjarwork@gmail.com, paymentID = pi_3Jv8uZLNjSaTJ8R60iMp8kHA","level":"error","service":"credit-gifting-service"}
+{"message":"physician_course. Failed to notify = Smeet Gajjar, email = smeetgajjarwork@gmail.com, paymentID = pi_3K4YiBGVWfRpABIv0dvX2DKI","level":"error","service":"credit-gifting-service"}
+{"message":"physician_course. Failed to notify = Smeet Gajjar, email = smeetgajjarwork@gmail.com, paymentID = pi_3K4YmgGVWfRpABIv2zy4PkMe","level":"error","service":"credit-gifting-service"}
+{"message":"error is Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials t14sm3003982ilu.55 - gsmtp info is undefined","level":"error","service":"credit-gifting-service"}
+{"message":"donation. Failed to notify email = smeetgajjarwork@gmail.com","level":"error","service":"credit-gifting-service"}
+{"message":"donation. Failed to notify email = smeetgajjarwork@gmail.com","level":"error","service":"credit-gifting-service"}
+{"message":"sky_reslience. Failed to notify = Smeet Gajjar Test, email = smeetgajjarwork@gmail.com, paymentID = pi_3L2pMjGVWfRpABIv2EiJLQKD","level":"error","service":"credit-gifting-service"}
+{"message":"error is Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a16-20020ac87210000000b002f39b99f6a0sm5214623qtp.58 - gsmtp info is undefined","level":"error","service":"credit-gifting-service"}
+{"message":"donation. error in sending success email Error: SQLITE_BUSY: database is locked","level":"error","service":"credit-gifting-service"}

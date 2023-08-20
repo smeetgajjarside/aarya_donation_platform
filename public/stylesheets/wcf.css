@@ -1,0 +1,69 @@
+
+.header .logo {
+    height: 40px;
+    width: 85px !important;
+}
+
+.ui.inverted.menu {
+  background-color: #F9423A;
+  border: 0px !important;
+  border-radius: 0px !important;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgb(203 197 197 / 0%), rgba(0, 0, 0, 0)), url(https://wcf.artofliving.org/wp-content/uploads/2023/04/white-House.jpg);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+
+.header-title h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.header-title {
+  background-color: #9b51e0;
+  padding: 10px 50px;
+  color: white;
+}
+
+.header-description {
+  font-size: 22px;
+  font-weight: bold !important;
+}
+
+.hero-text {
+  color: white;
+  width: 1097px;
+}
+
+.text-description {
+  line-height: 1.5;
+  font-size: 20px;
+  text-align: center;
+  color: #1b1c1d;
+}
+
+/* overriding semantic */
+h3, h4 {
+  font-weight: normal !important;
+}
+
+button#onetime {
+  background-color: #F9423A;
+  border: 2px solid #F9423A !important;
+}
+
+#amount-buttons-row .button {
+  padding: 20px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid purple;
+}
