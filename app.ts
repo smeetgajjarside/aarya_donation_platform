@@ -304,7 +304,7 @@ app.get('/refund', async (req, res) => {
   return;
 });
 
-app.listen(3005, (): void => {
+app.listen(3010, (): void => {
   if (process.env.NODE_ENV !== 'production') {
     logger.add(
       new winston.transports.Console({
@@ -318,7 +318,7 @@ app.listen(3005, (): void => {
     logger.error('Could not connect to giftingRecords DB');
     return;
   }
-  console.log('Gifting stripe server is listening on port 3005');
+  console.log('Gifting stripe server is listening on port 3010');
 });
 
 /**
